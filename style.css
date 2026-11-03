@@ -561,12 +561,12 @@ a {
     margin-bottom: 45px;
 }
 
-.about-heading h2 {
-    font-family: 'Great Vibes', cursive;
-    font-size: clamp(3.5rem, 7vw, 5.5rem);
-    font-weight: 400;
+.about-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    font-weight: 500;
     color: var(--ivory);
-    margin: 15px 0;
+    margin: 15px 0 45px;
 }
 
 .about-ornament {
