@@ -1,3 +1,4 @@
+
 /* =========================================
    SADIE LYNN — AUTHOR WEBSITE
    Cozy, moody, bookish, and a little boho.
@@ -6,6 +7,7 @@
 :root {
     --teal: #073D3A;
     --teal-dark: #052E2C;
+    --teal-light: #174F49;
     --rust: #A94727;
     --ivory: #F0E3CA;
     --cream: #F7F0E4;
@@ -24,6 +26,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 30px;
 }
 
 body {
@@ -41,8 +44,8 @@ a {
 /* NAVIGATION */
 
 .site-header {
-    min-height: 88px;
-    padding: 18px 7%;
+    min-height: 92px;
+    padding: 16px 7%;
     background: var(--teal-dark);
     display: flex;
     align-items: center;
@@ -50,12 +53,14 @@ a {
     gap: 30px;
     position: relative;
     z-index: 2;
+    border-bottom: 1px solid rgba(178, 138, 77, 0.35);
 }
 
 .logo,
 .footer-logo {
     font-family: 'Great Vibes', cursive;
-    font-size: 2.4rem;
+    font-size: 2.7rem;
+    font-weight: 400;
     color: var(--ivory);
     white-space: nowrap;
 }
@@ -70,7 +75,7 @@ a {
 
 .main-nav a {
     color: var(--ivory);
-    font-size: 0.72rem;
+    font-size: 0.69rem;
     letter-spacing: 2px;
     text-transform: uppercase;
     transition: color 0.3s ease;
@@ -83,18 +88,28 @@ a {
 /* HERO */
 
 .hero {
-    min-height: 690px;
+    min-height: 700px;
     background-color: var(--teal);
     background-image:
-        linear-gradient(rgba(4, 39, 37, 0.86), rgba(4, 39, 37, 0.86)),
+        radial-gradient(
+            ellipse at 25% 55%,
+            rgba(30, 91, 82, 0.65),
+            transparent 65%
+        ),
+        linear-gradient(
+            115deg,
+            rgba(4, 39, 37, 0.97),
+            rgba(7, 61, 58, 0.92)
+        ),
         url("https://www.transparenttextures.com/patterns/dark-matter.png");
     color: var(--ivory);
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 0.95fr;
     align-items: center;
     padding: 75px 7%;
     gap: 55px;
     position: relative;
+    overflow: hidden;
 }
 
 .hero-content {
@@ -114,11 +129,12 @@ a {
 
 .hero-logo {
     font-family: 'Great Vibes', cursive;
-    font-size: clamp(4rem, 8vw, 7rem);
+    font-size: clamp(4.5rem, 8vw, 7.4rem);
     font-weight: 400;
     line-height: 1.2;
     margin: 18px 0 0;
     color: var(--ivory);
+    text-shadow: 0 3px 18px rgba(0, 0, 0, 0.18);
 }
 
 .hero-subtitle {
@@ -137,7 +153,7 @@ a {
 
 .hero-content h2 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2.2rem, 4vw, 3.4rem);
+    font-size: clamp(2.2rem, 3.8vw, 3.3rem);
     font-weight: 500;
     line-height: 1.12;
     margin-bottom: 20px;
@@ -145,7 +161,7 @@ a {
 
 .hero-description {
     color: #E6D8C1;
-    max-width: 420px;
+    max-width: 440px;
     margin: 0 auto;
     font-size: 0.9rem;
 }
@@ -160,7 +176,7 @@ a {
 
 .button {
     display: inline-block;
-    padding: 13px 23px;
+    padding: 14px 24px;
     font-size: 0.68rem;
     letter-spacing: 1.7px;
     text-transform: uppercase;
@@ -177,6 +193,7 @@ a {
     background: var(--gold);
     border-color: var(--gold);
     color: var(--teal-dark);
+    transform: translateY(-2px);
 }
 
 .button-secondary {
@@ -187,29 +204,38 @@ a {
 .button-secondary:hover {
     background: var(--gold);
     color: var(--teal-dark);
+    transform: translateY(-2px);
 }
 
 /* READING NOOK IMAGE */
 
 .hero-image {
-    min-height: 500px;
+    min-height: 520px;
     width: 100%;
     background-image:
-        linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)),
-        url("https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1200&q=85");
+        linear-gradient(
+            rgba(5, 30, 28, 0.04),
+            rgba(5, 30, 28, 0.12)
+        ),
+        url("sadie-reading-nook.jpg");
     background-size: cover;
     background-position: center;
-    border: 8px solid rgba(178, 138, 77, 0.45);
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+    border: 8px solid rgba(178, 138, 77, 0.55);
+    outline: 1px solid rgba(240, 227, 202, 0.35);
+    outline-offset: -17px;
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.35),
+        0 0 30px rgba(0, 0, 0, 0.12);
     position: relative;
 }
 
 /* WELCOME SECTION */
 
 .welcome-section {
-    padding: 95px 8% 110px;
+    padding: 105px 8% 115px;
     background-color: var(--cream);
-    background-image: url("https://www.transparenttextures.com/patterns/cream-paper.png");
+    background-image:
+        url("https://www.transparenttextures.com/patterns/cream-paper.png");
     text-align: center;
     position: relative;
 }
@@ -226,14 +252,14 @@ a {
         0 0, 5% 35%, 10% 0, 15% 45%, 20% 5%,
         25% 50%, 30% 0, 35% 40%, 40% 0, 45% 50%,
         50% 0, 55% 40%, 60% 0, 65% 50%, 70% 0,
-        75% 40%, 80% 0, 85% 45%, 90% 0, 95% 40%, 100% 0,
-        100% 100%, 0 100%
+        75% 40%, 80% 0, 85% 45%, 90% 0, 95% 40%,
+        100% 0, 100% 100%, 0 100%
     );
 }
 
 .section-heading {
     max-width: 700px;
-    margin: 0 auto 55px;
+    margin: 0 auto 65px;
 }
 
 .section-heading h2,
@@ -263,9 +289,26 @@ a {
 }
 
 .feature-card {
-    padding: 35px 25px;
+    padding: 38px 25px;
     border-top: 1px solid rgba(178, 138, 77, 0.65);
     border-bottom: 1px solid rgba(178, 138, 77, 0.65);
+    position: relative;
+}
+
+.feature-card::before,
+.feature-card::after {
+    content: "✧";
+    position: absolute;
+    color: var(--gold);
+    font-size: 0.85rem;
+}
+
+.feature-card::before {
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--cream);
+    padding: 0 10px;
 }
 
 .feature-icon {
@@ -278,7 +321,7 @@ a {
 .feature-card h3 {
     font-family: 'Cormorant Garamond', serif;
     color: var(--teal);
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     font-weight: 600;
 }
 
@@ -303,9 +346,11 @@ a {
 /* BOOKSHELF */
 
 .bookshelf-section {
-    padding: 100px 8%;
+    padding: 105px 8%;
     text-align: center;
-    background: #E8D8BD;
+    background:
+        linear-gradient(rgba(232, 216, 189, 0.94), rgba(232, 216, 189, 0.94)),
+        url("https://www.transparenttextures.com/patterns/cream-paper.png");
 }
 
 .bookshelf-section > p,
@@ -329,7 +374,7 @@ a {
 
 .extras-section,
 .contact-section {
-    padding: 85px 8%;
+    padding: 95px 8%;
     text-align: center;
 }
 
@@ -338,7 +383,12 @@ a {
 }
 
 .contact-section {
-    background: var(--teal);
+    background:
+        radial-gradient(
+            ellipse at center,
+            var(--teal-light),
+            var(--teal-dark)
+        );
 }
 
 .contact-section h2 {
@@ -352,14 +402,15 @@ a {
 /* FOOTER */
 
 .site-footer {
-    padding: 45px 20px;
+    padding: 50px 20px;
     text-align: center;
     background: var(--teal-dark);
     color: var(--ivory);
+    border-top: 1px solid rgba(178, 138, 77, 0.4);
 }
 
 .footer-logo {
-    font-size: 2.3rem;
+    font-size: 2.6rem;
 }
 
 .site-footer p {
@@ -375,12 +426,20 @@ a {
     letter-spacing: 1px;
 }
 
-/* MOBILE LAYOUT */
+/* ACCESSIBILITY */
+
+a:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 4px;
+}
+
+/* TABLET AND MOBILE */
 
 @media (max-width: 850px) {
     .site-header {
         flex-direction: column;
         padding: 20px;
+        gap: 12px;
     }
 
     .main-nav {
@@ -395,25 +454,59 @@ a {
     .hero {
         grid-template-columns: 1fr;
         padding: 65px 7%;
+        gap: 45px;
+    }
+
+    .hero-content {
+        max-width: 650px;
     }
 
     .hero-image {
-        min-height: 350px;
+        min-height: 430px;
+        max-width: 650px;
+        margin: 0 auto;
     }
 
     .feature-grid {
         grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 30px;
+        max-width: 550px;
     }
 }
 
 @media (max-width: 480px) {
+    .logo {
+        font-size: 2.4rem;
+    }
+
+    .main-nav {
+        gap: 12px;
+    }
+
+    .main-nav a {
+        font-size: 0.58rem;
+        letter-spacing: 1px;
+    }
+
+    .hero {
+        padding: 55px 6%;
+    }
+
     .hero-logo {
-        font-size: 4.2rem;
+        font-size: 4.4rem;
     }
 
     .hero-content h2 {
-        font-size: 2.3rem;
+        font-size: 2.25rem;
+    }
+
+    .author-label {
+        letter-spacing: 2.5px;
+    }
+
+    .hero-image {
+        min-height: 320px;
+        border-width: 5px;
     }
 
     .hero-buttons {
@@ -430,6 +523,6 @@ a {
     .bookshelf-section,
     .extras-section,
     .contact-section {
-        padding: 65px 7%;
+        padding: 70px 7%;
     }
 }
