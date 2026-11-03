@@ -360,14 +360,69 @@ a {
     font-size: 0.9rem;
 }
 
-.book-placeholder {
-    max-width: 700px;
-    margin: 40px auto 0;
-    padding: 65px 20px;
-    border: 1px dashed var(--gold);
-    color: var(--chocolate);
+.featured-book {
+    max-width: 850px;
+    margin: 50px auto 0;
+    padding: 35px;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    align-items: center;
+    gap: 45px;
+    background: var(--cream);
+    border: 1px solid rgba(178, 138, 77, 0.5);
+    box-shadow: 0 12px 30px rgba(52, 44, 39, 0.12);
+    text-align: left;
+}
+
+.featured-book-cover img {
+    display: block;
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    box-shadow: 5px 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+.featured-book-details h3 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.5rem;
+    font-size: 2.6rem;
+    color: var(--teal);
+    line-height: 1.1;
+    margin: 12px 0;
+}
+
+.featured-book-details p {
+    color: var(--muted);
+    margin: 15px 0;
+    font-size: 0.9rem;
+}
+
+.book-author {
+    font-style: italic;
+}
+
+.book-status {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 9px 18px;
+    border: 1px solid var(--gold);
+    color: var(--rust);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 650px) {
+    .featured-book {
+        grid-template-columns: 1fr;
+        text-align: center;
+        justify-items: center;
+        padding: 25px;
+        gap: 25px;
+    }
+
+    .featured-book-cover img {
+        max-width: 220px;
+    }
 }
 
 /* EXTRAS AND CONTACT */
