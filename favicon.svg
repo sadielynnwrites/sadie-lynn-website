@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="10" fill="#174C4B"/>
+    <rect x="3" y="3" width="58" height="58" rx="8"
+          fill="none" stroke="#C5A46D" stroke-width="1.5"/>
+    <text x="32" y="43"
+          text-anchor="middle"
+          font-family="Georgia, serif"
+          font-size="31"
+          fill="#E2C58E">SL</text>
+</svg>
